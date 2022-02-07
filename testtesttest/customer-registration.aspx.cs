@@ -21,16 +21,16 @@ WebConfigurationManager.ConnectionStrings["JACcs"].ConnectionString;
         {
             string filePP = "avatar.jpg";
             string gender = "";
-            if (radFemale.Checked)
+            if (radFemale.Checked == true)
             {
                 gender = radFemale.Text;
 
             }
-            else if (radMale.Checked)
+            else if (radMale.Checked == true)
             {
                 gender = radMale.Text;
             }
-            else if (radMiss.Checked)
+            else if (radMiss.Checked == true)
             {
                 gender = radMiss.Text;
             }
