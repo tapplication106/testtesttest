@@ -5,6 +5,7 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 using System.Web.Configuration;
+using System.Web.UI.WebControls;
 
 namespace testtesttest
 {
@@ -14,7 +15,11 @@ namespace testtesttest
 WebConfigurationManager.ConnectionStrings["JACcs"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
+            rvdob.MinimumValue = DateTime.Now.AddYears(-45).ToShortDateString();
+            rvdob.MaximumValue = DateTime.Now.AddYears(-18).ToShortDateString();
+            rvdob.Type = ValidationDataType.Date;
 
+            txtnic.Focus();
         }
 
         protected void btnregister1_Click(object sender, EventArgs e)

@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/guestmaster.Master" AutoEventWireup="true" CodeBehind="customer-registration.aspx.cs" Inherits="testtesttest.customer_registration" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         #container2 {
@@ -44,18 +45,18 @@
 
                             <div class="form-group row justify-content-center">
                                 <asp:Label runat="server"
-                                    CssClass="col-md-2 col-form-label  ">National Identity Card Number</asp:Label>
+                                    CssClass="col-md-2 col-form-label " Text="*National ID"></asp:Label>
                                 <div class="col-md-8">
                                     <asp:TextBox runat="server" ID="txtnic" ToolTip="National Identity Card Number is REQUIRED!!!"
                                         CssClass="form-control" />
 
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator6"
-                                        ControlToValidate="txtNIC"
+                                        ControlToValidate="txtnic"
                                         ForeColor="#cc0000"
                                         Display="Dynamic"
                                         Text="REQUIRED FIELD"
                                         SetFocusOnError="true"
-                                        runat="server" ErrorMessage="NIC is REQUIRED!!!"></asp:RequiredFieldValidator>
+                                        runat="server" ErrorMessage="NIC is REQUIRED"></asp:RequiredFieldValidator>
 
                                 </div>
                             </div>
@@ -63,25 +64,30 @@
 
                             <div class="form-group row justify-content-center">
                                 <asp:Label runat="server"
-                                    CssClass="col-md-2 col-form-label  ">Title</asp:Label>
+                                    CssClass="col-md-2 col-form-label" Text="*Title"></asp:Label>
                                 <div class="col-md-8">
                                     <div class="form-check-inline">
-                                        <asp:RadioButton runat="server" GroupName="sex" ID="radMale" Text="Mr."/>
+                                        <asp:RadioButton runat="server" GroupName="sex" ID="radMale" Text="Mr." />
                                         <asp:Label runat="server"
                                             CssClass="form-check-label"></asp:Label>
                                     </div>
 
                                     <div class="form-check-inline">
-                                        <asp:RadioButton runat="server" GroupName="sex" ID="radFemale" Text="Mrs."/>
+                                        <asp:RadioButton runat="server" GroupName="sex" ID="radFemale" Text="Mrs." />
                                         <asp:Label runat="server"
                                             CssClass="form-check-label"></asp:Label>
                                     </div>
 
                                     <div class="form-check-inline">
-                                        <asp:RadioButton runat="server" GroupName="sex" ID="radMiss" Text="Miss."/>
+                                        <asp:RadioButton runat="server" GroupName="sex" ID="radMiss" Text="Miss." />
                                         <asp:Label runat="server"
                                             CssClass="form-check-label"></asp:Label>
+
+
                                     </div>
+
+
+
                                 </div>
                             </div>
 
@@ -89,7 +95,7 @@
 
                             <div class="form-group row justify-content-center">
                                 <asp:Label runat="server"
-                                    CssClass="col-md-2 col-form-label  ">First Name</asp:Label>
+                                    CssClass="col-md-2 col-form-label" Text="*First Name"></asp:Label>
                                 <div class="col-md-8">
                                     <asp:TextBox runat="server" ID="txtfname" ToolTip="First name is required"
                                         CssClass="form-control" />
@@ -109,7 +115,7 @@
 
                             <div class="form-group row justify-content-center">
                                 <asp:Label runat="server"
-                                    CssClass="col-md-2 col-form-label  ">Last Name</asp:Label>
+                                    CssClass="col-md-2 col-form-label" Text="*Last Name"></asp:Label>
                                 <div class="col-md-8">
                                     <asp:TextBox runat="server" ID="txtlname" ToolTip="Last name is REQUIRED!!!"
                                         CssClass="form-control" />
@@ -119,7 +125,7 @@
                                         Display="Dynamic"
                                         Text="REQUIRED FIELD"
                                         SetFocusOnError="true"
-                                        runat="server" ErrorMessage="Last name is REQUIRED!!!"></asp:RequiredFieldValidator>
+                                        runat="server" ErrorMessage="Last name is REQUIRED"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
 
@@ -127,12 +133,20 @@
 
                             <div class="form-group row justify-content-center">
                                 <asp:Label ID="lbljDeadline" runat="server"
-                                    CssClass="col-md-2 col-form-label">Date Of Birth</asp:Label>
+                                    CssClass="col-md-2 col-form-label" Text="*Date Of Birth"></asp:Label>
                                 <div class="col-md-8">
                                     <asp:TextBox runat="server"
                                         ID="txtjDeadline"
                                         TextMode="Date"
                                         CssClass="form-control" />
+
+                                    <asp:RangeValidator ID="rvdob"
+                                        Text="Out of range"
+                                        ForeColor="#cc0000"
+                                        Display="Dynamic"
+                                        ControlToValidate="txtjDeadline"
+                                        runat="server"
+                                        ErrorMessage="You should be 18 years"></asp:RangeValidator>
 
                                     <asp:RequiredFieldValidator ID="reqjDeadline"
                                         ControlToValidate="txtjDeadline"
@@ -143,15 +157,18 @@
                                         runat="server"
                                         ErrorMessage="Date Of Birth required!"></asp:RequiredFieldValidator>
 
+                                    
+
                                 </div>
                             </div>
 
                             <div class="form-group row justify-content-center">
                                 <asp:Label runat="server"
-                                    CssClass="col-md-2 col-form-label  ">Street</asp:Label>
+                                    CssClass="col-md-2 col-form-label" Text="*Street"></asp:Label>
                                 <div class="col-md-8">
-                                    <asp:TextBox runat="server" ID="txtstreet" ToolTip="Street is REQUIRED!!!"
-                                        CssClass="form-control" ForeColor="blue" />
+                                    <asp:TextBox ID="txtstreet" runat="server"
+                                        ToolTip="Street is REQUIRED"
+                                        CssClass="form-control" />
 
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator5"
                                         ControlToValidate="txtstreet"
@@ -159,7 +176,7 @@
                                         Display="Dynamic"
                                         Text="REQUIRED FIELD"
                                         SetFocusOnError="true"
-                                        runat="server" ErrorMessage="Street is REQUIRED!!!"></asp:RequiredFieldValidator>
+                                        runat="server" ErrorMessage="Street is REQUIRED"></asp:RequiredFieldValidator>
 
                                 </div>
                             </div>
@@ -168,9 +185,9 @@
 
                             <div class="form-group row justify-content-center">
                                 <asp:Label runat="server"
-                                    CssClass="col-md-2 col-form-label  ">Area</asp:Label>
+                                    CssClass="col-md-2 col-form-label" Text="*Area"></asp:Label>
                                 <div class="col-md-8">
-                                    <asp:TextBox runat="server" ID="txtarea" ToolTip="Area is REQUIRED!!!"
+                                    <asp:TextBox runat="server" ID="txtarea" ToolTip="Area is REQUIRED"
                                         CssClass="form-control" />
 
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3"
@@ -179,7 +196,7 @@
                                         Display="Dynamic"
                                         Text="REQUIRED FIELD"
                                         SetFocusOnError="true"
-                                        runat="server" ErrorMessage="Area is REQUIRED!!!"></asp:RequiredFieldValidator>
+                                        runat="server" ErrorMessage="Area is REQUIRED"></asp:RequiredFieldValidator>
 
                                 </div>
                             </div>
@@ -188,20 +205,20 @@
 
                             <div class="form-group row justify-content-center">
                                 <asp:Label ID="lbljDistrict" runat="server"
-                                    CssClass="col-md-2 col-form-label" Text="District"></asp:Label>
+                                    CssClass="col-md-2 col-form-label" Text="*District"></asp:Label>
                                 <div class="col-md-8">
                                     <asp:DropDownList ID="ddljDistrict" runat="server"
                                         CssClass="form-control">
                                         <asp:ListItem Value="-1">Select District:</asp:ListItem>
-        <asp:ListItem Value="1">Flacq</asp:ListItem>
-        <asp:ListItem Value="2">Grand Port</asp:ListItem>
-        <asp:ListItem Value="3">Moka</asp:ListItem>
-        <asp:ListItem Value="4">Pamplemousses</asp:ListItem>
-        <asp:ListItem Value="5">Plaines Wilhems</asp:ListItem>
-        <asp:ListItem Value="6">Port Louis</asp:ListItem>
-        <asp:ListItem Value="7">Riviere du Rempart</asp:ListItem>
-        <asp:ListItem Value="8">Riviere Noire</asp:ListItem>
-        <asp:ListItem Value="9">Savanne</asp:ListItem>
+                                        <asp:ListItem Value="1">Flacq</asp:ListItem>
+                                        <asp:ListItem Value="2">Grand Port</asp:ListItem>
+                                        <asp:ListItem Value="3">Moka</asp:ListItem>
+                                        <asp:ListItem Value="4">Pamplemousses</asp:ListItem>
+                                        <asp:ListItem Value="5">Plaines Wilhems</asp:ListItem>
+                                        <asp:ListItem Value="6">Port Louis</asp:ListItem>
+                                        <asp:ListItem Value="7">Riviere du Rempart</asp:ListItem>
+                                        <asp:ListItem Value="8">Riviere Noire</asp:ListItem>
+                                        <asp:ListItem Value="9">Savanne</asp:ListItem>
                                     </asp:DropDownList>
 
                                 </div>
@@ -211,17 +228,18 @@
 
                             <div class="form-group row justify-content-center">
                                 <asp:Label runat="server"
-                                    CssClass="col-md-2 col-form-label  ">Mobile Phone</asp:Label>
+                                    CssClass="col-md-2 col-form-label" Text="*Mobile Phone"></asp:Label>
                                 <div class="col-md-8">
-                                    <asp:TextBox runat="server" ID="txtphone" ToolTip="Mobile Phone is REQUIRED!!!"
+                                    <asp:TextBox runat="server" ID="txtphone" ToolTip="Mobile Phone is REQUIRED"
                                         CssClass="form-control" />
+
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator7"
                                         ControlToValidate="txtphone"
                                         ForeColor="#cc0000"
                                         Display="Dynamic"
                                         Text="REQUIRED FIELD"
                                         SetFocusOnError="true"
-                                        runat="server" ErrorMessage="Mobile Phone is REQUIRED!!!"></asp:RequiredFieldValidator>
+                                        runat="server" ErrorMessage="Mobile Phone is REQUIRED"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
 
@@ -229,7 +247,7 @@
 
                             <div class="form-group row justify-content-center">
                                 <asp:Label runat="server"
-                                    CssClass="col-md-2 col-form-label  ">Telephone</asp:Label>
+                                    CssClass="col-md-2 col-form-label" Text="*Telephone"></asp:Label>
                                 <div class="col-md-8">
                                     <asp:TextBox runat="server" ID="txttel" ToolTip="Telephone Phone is REQUIRED!!!"
                                         CssClass="form-control" />
@@ -239,7 +257,7 @@
                                         Display="Dynamic"
                                         Text="REQUIRED FIELD"
                                         SetFocusOnError="true"
-                                        runat="server" ErrorMessage="Telephone Number is REQUIRED!!!"></asp:RequiredFieldValidator>
+                                        runat="server" ErrorMessage="Telephone Number is REQUIRED"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
 
@@ -247,17 +265,20 @@
 
                             <div class="form-group row justify-content-center">
                                 <asp:Label runat="server"
-                                    CssClass="col-md-2 col-form-label  ">Email</asp:Label>
+                                    CssClass="col-md-2 col-form-label" Text="*Email"></asp:Label>
                                 <div class="col-md-8">
-                                    <asp:TextBox runat="server" ID="txtemail" ToolTip="Email is REQUIRED!!!"
+                                    <asp:TextBox runat="server" ID="txtemail" ToolTip="Email is REQUIRED"
                                         CssClass="form-control" />
+
+
+
                                     <asp:RegularExpressionValidator ID="RegularExpressionValidator1"
                                         ControlToValidate="txtemail"
                                         ForeColor="#cc0000"
                                         SetFocusOnError="true"
                                         Display="Dynamic"
                                         Text="Invalid Email"
-                                        ValidationExpression="^[a-z0-9][-a-z0-9._]+@([-a-z0-9]+[.])+[a-z]{2,5}$"
+                                        ValidationExpression="^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$"
                                         runat="server"
                                         ErrorMessage="Incorrect Email Format"></asp:RegularExpressionValidator>
 
@@ -267,7 +288,7 @@
                                         Display="Dynamic"
                                         Text="REQUIRED FIELD"
                                         SetFocusOnError="true"
-                                        runat="server" ErrorMessage="EMAIL is REQUIRED!!!"></asp:RequiredFieldValidator>
+                                        runat="server" ErrorMessage="EMAIL is REQUIRED"></asp:RequiredFieldValidator>
 
 
                                 </div>
@@ -278,7 +299,8 @@
 
 
                             <div class="form-group row justify-content-center">
-                                <asp:Label ID="Label1" runat="server" CssClass="col-md-2 col-form-label  ">Upload picture</asp:Label>
+                                <asp:Label ID="Label1" runat="server"
+                                    CssClass="col-md-2 col-form-label" Text="*Upload Picture"></asp:Label>
                                 <div class="col-md-8">
                                     <asp:FileUpload ID="FileUpload1" runat="server"
                                         CssClass=" file form-control" />
@@ -291,17 +313,18 @@
 
                             <div class="form-group row justify-content-center">
                                 <asp:Label runat="server"
-                                    CssClass="col-md-2 col-form-label  ">Username</asp:Label>
+                                    CssClass="col-md-2 col-form-label" Text="*Username"></asp:Label>
                                 <div class="col-md-8">
-                                    <asp:TextBox runat="server" ID="txtusername" ToolTip="Username is REQUIRED!!!"
+                                    <asp:TextBox runat="server" ID="txtusername" ToolTip="Username is REQUIRED"
                                         CssClass="form-control" />
+
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator8"
                                         ControlToValidate="txtlname"
                                         ForeColor="#cc0000"
                                         Display="Dynamic"
                                         Text="REQUIRED FIELD"
                                         SetFocusOnError="true"
-                                        runat="server" ErrorMessage="Username is REQUIRED!!!"></asp:RequiredFieldValidator>
+                                        runat="server" ErrorMessage="Username is REQUIRED"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
 
@@ -309,18 +332,25 @@
 
                             <div class="form-group row justify-content-center">
                                 <asp:Label runat="server"
-                                    CssClass="col-md-2 col-form-label  ">Password</asp:Label>
+                                    CssClass="col-md-2 col-form-label" Text="*Password"></asp:Label>
                                 <div class="col-md-8">
-                                    <asp:TextBox runat="server" ID="txtpass" ToolTip="Password is REQUIRED!!!" TextMode="Password"
+                                    <asp:TextBox runat="server" ID="txtpass" ToolTip="Password is REQUIRED"
+                                        TextMode="Password"
                                         CssClass="form-control" />
-                                    <asp:CustomValidator ID="CustomValidator1"
-                                        runat="server"
-                                        AutoPostBack="true"
+
+                                    <asp:RequiredFieldValidator ID="reqpass"
                                         ControlToValidate="txtpass"
+                                        runat="server"
                                         ForeColor="#cc0000"
-                                        ClientValidationFunction="validatePassword"
-                                        Text="7 to 12 characters"
-                                        ErrorMessage="Password hould be 7 to 12 characters"></asp:CustomValidator>
+                                        Text="REQUIRED FIELD"
+                                        ErrorMessage="Password is REQUIRED"></asp:RequiredFieldValidator><br />
+
+                                    <asp:RegularExpressionValidator ID="regPass"
+                                        ControlToValidate="txtpass"
+                                        ValidationExpression="^(?=.*\d{2})(?=.*[a-zA-Z]{2}).{6,}$"
+                                        runat="server"
+                                        ErrorMessage="Password Not Strong"></asp:RegularExpressionValidator>
+
                                 </div>
                             </div>
 
@@ -328,20 +358,29 @@
 
                             <div class="form-group row justify-content-center">
                                 <asp:Label runat="server"
-                                    CssClass="col-md-2 col-form-label  ">Confirm Password</asp:Label>
+                                    CssClass="col-md-2 col-form-label" Text="*Confirm Password"></asp:Label>
                                 <div class="col-md-8">
                                     <asp:TextBox runat="server" ID="txtconfirm" TextMode="Password"
                                         CssClass="form-control" />
-                                    <asp:CompareValidator ID="CompareValidator1"
+
+
+
+                                    <asp:RequiredFieldValidator ID="ReqCpassword"
+                                        ControlToValidate="txtconfirm"
                                         runat="server"
                                         ForeColor="#cc0000"
+                                        Text="REQUIRED FIELD"
+                                        ErrorMessage="Confirm Password is REQUIRED "></asp:RequiredFieldValidator><br />
+
+                                    <asp:CompareValidator ID="conPassword"
+                                        runat="server"
                                         SetFocusOnError="true"
-                                        Display="Dynamic"
-                                        ControlToValidate="txtconfirm"
                                         ControlToCompare="txtpass"
+                                        ControlToValidate="txtconfirm"
                                         Operator="Equal"
                                         Text="Password do not Match"
-                                        ErrorMessage="Incorrect Password "></asp:CompareValidator>
+                                        ErrorMessage="Password does not match"></asp:CompareValidator>
+
                                 </div>
                             </div>
 

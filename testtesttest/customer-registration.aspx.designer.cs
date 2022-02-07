@@ -132,6 +132,15 @@ namespace testtesttest
         protected global::System.Web.UI.WebControls.TextBox txtjDeadline;
 
         /// <summary>
+        /// rvdob control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator rvdob;
+
+        /// <summary>
         /// reqjDeadline control.
         /// </summary>
         /// <remarks>
@@ -303,13 +312,22 @@ namespace testtesttest
         protected global::System.Web.UI.WebControls.TextBox txtpass;
 
         /// <summary>
-        /// CustomValidator1 control.
+        /// reqpass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator1;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqpass;
+
+        /// <summary>
+        /// regPass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator regPass;
 
         /// <summary>
         /// txtconfirm control.
@@ -321,13 +339,22 @@ namespace testtesttest
         protected global::System.Web.UI.WebControls.TextBox txtconfirm;
 
         /// <summary>
-        /// CompareValidator1 control.
+        /// ReqCpassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator1;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqCpassword;
+
+        /// <summary>
+        /// conPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator conPassword;
 
         /// <summary>
         /// btnregister1 control.
