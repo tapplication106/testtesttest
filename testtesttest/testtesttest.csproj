@@ -103,9 +103,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="App_Data\JACdb.mdf" />
+    <Content Include="App_Data\JACdb.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="App_Data\JACdb_log.ldf">
       <DependentUpon>JACdb.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="assets\css\theme-rtl.css" />
     <Content Include="assets\css\theme-rtl.min.css" />
