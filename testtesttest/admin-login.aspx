@@ -22,6 +22,10 @@
             font-size:18px;
         }
 
+        .fontsize{
+            font-size:18px;
+        }
+
     </style>
 
 </asp:Content>
@@ -47,18 +51,36 @@
                             </div>--%>
                              <div class="form-group row">
                                 <asp:Label runat="server"
-                                    CssClass="col-md-3 col-form-label">Username: </asp:Label>
+                                    CssClass="col-md-4 col-form-label font-base fw-bold fontsize">Username: </asp:Label>
                                 <div class="col-md-7">
-                                    <asp:TextBox runat="server" ID="txtfname" ToolTip="First name is required"
+                                    <asp:TextBox runat="server" ID="txtusername" ToolTip="First name is required"
                                         CssClass="form-control" />
 
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1"
-                                        ControlToValidate="txtfname"
+                                        ControlToValidate="txtusername"
                                         ForeColor="#cc0000"
                                         Display="Dynamic"
                                         Text="REQUIRED FIELD"
                                         SetFocusOnError="true"
-                                        runat="server" ErrorMessage="First name is REQUIRED!!!"></asp:RequiredFieldValidator>
+                                        runat="server" ErrorMessage="Username is REQUIRED!!!"></asp:RequiredFieldValidator>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <asp:Label runat="server"
+                                    CssClass="col-md-4 col-form-label font-base fw-bold fontsize">Password: </asp:Label>
+                                <div class="col-md-7">
+                                    <asp:TextBox runat="server" TextMode="Password" ID="txtpass" ToolTip="First name is required"
+                                        CssClass="form-control" />
+
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2"
+                                        ControlToValidate="txtpass"
+                                        ForeColor="#cc0000"
+                                        Display="Dynamic"
+                                        Text="REQUIRED FIELD"
+                                        SetFocusOnError="true"
+                                        runat="server" ErrorMessage="Username is REQUIRED!!!"></asp:RequiredFieldValidator>
 
                                 </div>
                             </div>
