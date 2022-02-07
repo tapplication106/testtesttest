@@ -80,7 +80,7 @@
                 <div class="col-md-6 mb-5">
                   <div class="card text-white"><img class="card-img" src="assets/img/gallery/short-terms.png" alt="..." />
                     <div class="card-img-overlay d-flex flex-column justify-content-center px-5 px-md-3 px-lg-5 bg-dark-gradient">
-                      <h6 class="text-white pt-2"><span text-white>Our packages</span></h6>
+                      <h6 class="text-white pt-2"><span class=text-white >Our packages</span></h6>
                       <hr class="text-white" style="height:0.12rem;width:2.813rem" />
                       <div class="pt-lg-3">
                         <h6 class="fw-bold text-white fs-1 fs-md-2 fs-lg-3 w-xxl-50">Select existing packages</h6>
