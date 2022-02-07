@@ -103,6 +103,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="App_Data\JACdb.mdf" />
+    <Content Include="App_Data\JACdb_log.ldf">
+      <DependentUpon>JACdb.mdf</DependentUpon>
+    </Content>
     <Content Include="assets\css\theme-rtl.css" />
     <Content Include="assets\css\theme-rtl.min.css" />
     <Content Include="assets\css\theme.css" />
@@ -462,9 +466,7 @@
       <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
