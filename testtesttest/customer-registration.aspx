@@ -84,7 +84,7 @@
                                         runat="server" ControlToValidate="txtnic"
                                         ForeColor="#cc0000"
                                         ValidationExpression="^[A-Z]{1}[0-9]{13}$"
-                                        ErrorMessage="Invalid First Name"></asp:RegularExpressionValidator>
+                                        ErrorMessage="Invalid National ID"></asp:RegularExpressionValidator>
 
 
 
