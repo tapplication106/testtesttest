@@ -103,6 +103,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="admin-login.aspx" />
     <Content Include="App_Data\JACdb.mdf" />
     <Content Include="App_Data\JACdb_log.ldf">
       <DependentUpon>JACdb.mdf</DependentUpon>
@@ -382,6 +383,13 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin-login.aspx.cs">
+      <DependentUpon>admin-login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-login.aspx.designer.cs">
+      <DependentUpon>admin-login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
