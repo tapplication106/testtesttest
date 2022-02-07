@@ -27,6 +27,7 @@
               <p class="mb-4 fs-1">We provide you the best <u>main d'oeuvre</u> and educational materials for healthy sugarcane fields at the best price.</p>
                 <%--<a class="btn btn-lg btn-success" href="packages.aspx" role="button">Browse our packages</a>--%>
                 <asp:Button ID="Button2" PostBackUrl="~/packages.aspx" CssClass="btn btn-lg btn-success mybtn" runat="server" Text="Browse packages" />
+                <asp:Button ID="Button4" PostBackUrl="https://agricultural-company.africamotion.net" CssClass="btn btn-lg btn-primary mybtn" runat="server" Text="Join our forum" />
             </div>
           </div>
         </div>
