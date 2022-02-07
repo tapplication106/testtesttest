@@ -66,21 +66,21 @@
                                     CssClass="col-md-2 col-form-label  ">Title</asp:Label>
                                 <div class="col-md-8">
                                     <div class="form-check-inline">
-                                        <asp:RadioButton runat="server" GroupName="sex" ID="radMale" />
+                                        <asp:RadioButton runat="server" GroupName="sex" ID="radMale" Text="Mr."/>
                                         <asp:Label runat="server"
-                                            CssClass="form-check-label">Mr.</asp:Label>
+                                            CssClass="form-check-label"></asp:Label>
                                     </div>
 
                                     <div class="form-check-inline">
-                                        <asp:RadioButton runat="server" GroupName="sex" ID="radFemale"/>
+                                        <asp:RadioButton runat="server" GroupName="sex" ID="radFemale" Text="Mrs."/>
                                         <asp:Label runat="server"
-                                            CssClass="form-check-label">Mrs.</asp:Label>
+                                            CssClass="form-check-label"></asp:Label>
                                     </div>
 
                                     <div class="form-check-inline">
-                                        <asp:RadioButton runat="server" GroupName="sex" ID="radMiss"/>
+                                        <asp:RadioButton runat="server" GroupName="sex" ID="radMiss" Text="Miss."/>
                                         <asp:Label runat="server"
-                                            CssClass="form-check-label">Miss.</asp:Label>
+                                            CssClass="form-check-label"></asp:Label>
                                     </div>
                                 </div>
                             </div>
