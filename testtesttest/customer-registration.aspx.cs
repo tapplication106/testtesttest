@@ -182,5 +182,13 @@ WebConfigurationManager.ConnectionStrings["JACcs"].ConnectionString;
                     return false;
             }
         }
+
+        protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            if (args.Value.Length == 13)
+                args.IsValid = true;
+            else
+                args.IsValid = false;
+        }
     }
 }
