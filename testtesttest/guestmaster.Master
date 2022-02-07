@@ -142,8 +142,9 @@ see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
     <a href="admin-login.aspx"><b><span class="lnr lnr-lock"></span> &nbsp; ADMIN</b></a>
   </div>
                   <div id="loggedin" runat="server" visible="false" class="d-flex"><button class="btn btn-lg btn-warning bg-gradient order-0" type="submit">logout</button></div>
-                  <asp:Button CssClass="btn btn-lg btn-dark bg-gradient order-0" ID="btnlogout" ValidationGroup="valnone" Visible="false" CausesValidation="false" runat="server" Text="Logout" PostBackUrl="customer-registration.aspx" />
+                  
 </div>
+              <asp:Button CssClass="btn btn-lg btn-dark bg-gradient order-0" ID="btnlogout" ValidationGroup="valnone" Visible="false" CausesValidation="false" OnClick="btnlogout_Click" runat="server" Text="Logout"/>
 </div>
           </div>
         

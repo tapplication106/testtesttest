@@ -18,5 +18,24 @@ namespace testtesttest
                 btnregister.Visible = false;
             }
         }
+
+        void lgout()
+        {
+            if (Session["username"] != null)
+            {
+                //Remove all session
+                Session.RemoveAll();
+                //Destroy all Session objects
+                Session.Abandon();
+                //Redirect to homepage or login page
+                Response.Redirect("~/homepage");
+
+            }
+        }
+
+        protected void btnlogout_Click(object sender, EventArgs e)
+        {
+            lgout();
+        }
     }
 }

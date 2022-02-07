@@ -63,7 +63,7 @@ WebConfigurationManager.ConnectionStrings["JACcs"].ConnectionString;
             cmd.CommandType = CommandType.Text;
             //searching for a record containing matching username & password with
             //an active status
-            cmd.CommandText = "select * from tblAdmin where AD_username=@uname and AD_password=@pass";
+            cmd.CommandText = "select * from tblcustomer where cust_username=@uname and cust_password=@pass";
 
             //create two parameterized query for the above select statement
             //use above variables and encrypt password
@@ -101,7 +101,7 @@ WebConfigurationManager.ConnectionStrings["JACcs"].ConnectionString;
                     //create and save username in a session variable
                     Session["username"] = username;
                     //create and save userid in a session variable
-                    Session["userid"] = dr["ad_id"].ToString();
+                    Session["userid"] = dr["cust_id"].ToString();
                     //redirect to the corresponding page
                     Response.Redirect("~/homepage");
                 }

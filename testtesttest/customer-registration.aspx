@@ -21,7 +21,7 @@
 
     <script type="text/javascript">
         function validateNic(source, args) {
-            if (args.Value.length == 13)
+            if (args.Value.length == 14)
                 args.IsValid = true;
             else
                 args.IsValid = false;
@@ -77,13 +77,13 @@
                                         ForeColor="#cc0000"
                                         ClientValidationFunction="validateNic"
                                         OnServerValidate="CustomValidator1_ServerValidate"
-                                        Text="National ID should be 13 Characters"
+                                        Text="National ID should be 14 Characters"
                                         ErrorMessage="Invalid National ID"></asp:CustomValidator>
 
                                     <asp:RegularExpressionValidator ID="RegularExpressionValidator7"
                                         runat="server" ControlToValidate="txtnic"
                                         ForeColor="#cc0000"
-                                        ValidationExpression="^[A-Z]{1}[0-9]{12}$"
+                                        ValidationExpression="^[A-Z]{1}[0-9]{13}$"
                                         ErrorMessage="Invalid First Name"></asp:RegularExpressionValidator>
 
 
