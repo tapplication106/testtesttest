@@ -195,16 +195,6 @@
                                 <div class="col-md-8">
                                     <asp:DropDownList ID="ddljDistrict" runat="server"
                                         CssClass="form-control">
-                                        <asp:ListItem Value="-1">Select District:</asp:ListItem>
-        <asp:ListItem Value="1">Flacq</asp:ListItem>
-        <asp:ListItem Value="2">Grand Port</asp:ListItem>
-        <asp:ListItem Value="3">Moka</asp:ListItem>
-        <asp:ListItem Value="4">Pamplemousses</asp:ListItem>
-        <asp:ListItem Value="5">Plaines Wilhems</asp:ListItem>
-        <asp:ListItem Value="6">Port Louis</asp:ListItem>
-        <asp:ListItem Value="7">Riviere du Rempart</asp:ListItem>
-        <asp:ListItem Value="8">Riviere Noire</asp:ListItem>
-        <asp:ListItem Value="9">Savanne</asp:ListItem>
                                     </asp:DropDownList>
 
                                 </div>
@@ -358,7 +348,7 @@
                     <div class="form-group row justify-content-center">
                         <div class="offset-md-2 col-md-2">
                             <asp:Button runat="server" ID="btnregister1"
-                                Text="REGISTER" OnClick="btnregister1_Click"
+                                Text="REGISTER"
                                 CssClass="btn btn-block btn-primary" />
                         </div>
                     </div>
@@ -369,11 +359,10 @@
                         <div class="offset-md-2 col-md-2">
                             <asp:LinkButton runat="server" CausesValidation="false"
                                 ID="lnkreset"
-                                Text="CLEAR ALL" OnClick="lnkreset_Click"
+                                Text="CLEAR ALL"
                                 CssClass="btn btn-block btn-danger" />
                         </div>
                     </div>
-                    <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
 
                 </div>
 
