@@ -41,13 +41,31 @@
                     <div class="signin-form">
                         <h2 class="form-title"><b>ADMIN LOGIN</b></h2>
                         <div class="register-form" id="login-form">
-                            <div class="form-group">
-                                <label class="mylbl" for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                           <%-- <div class="form-group">
+                                <%--<label class="mylbl" for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                 <input type="text" runat="server" class="text-black mylbl" name="your_name" id="your_name" placeholder="Enter username"/>
+                            </div>--%>
+                             <div class="form-group row">
+                                <asp:Label runat="server"
+                                    CssClass="col-md-3 col-form-label">Username: </asp:Label>
+                                <div class="col-md-7">
+                                    <asp:TextBox runat="server" ID="txtfname" ToolTip="First name is required"
+                                        CssClass="form-control" />
+
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1"
+                                        ControlToValidate="txtfname"
+                                        ForeColor="#cc0000"
+                                        Display="Dynamic"
+                                        Text="REQUIRED FIELD"
+                                        SetFocusOnError="true"
+                                        runat="server" ErrorMessage="First name is REQUIRED!!!"></asp:RequiredFieldValidator>
+
+                                </div>
                             </div>
+
                             <div class="form-group">
-                                <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="password" class="mylbl" name="your_pass" id="your_pass" placeholder="Enter Password"/>
+                              <%--  <label id="lblpass" runat="server" for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" class="mylbl" name="your_pass" id="your_pass" placeholder="Enter Password"/>--%>
                             </div>
                             <div class="form-group">
                             </div>
