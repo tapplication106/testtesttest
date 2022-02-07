@@ -11,7 +11,12 @@ namespace testtesttest
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["username"] != null)
+            {
+                loggedout.Visible = false;
+                btnlogout.Visible = true;
+                btnregister.Visible = false;
+            }
         }
     }
 }
