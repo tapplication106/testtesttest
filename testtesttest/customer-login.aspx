@@ -21,11 +21,6 @@
             font-size:18px;
         }
 
-
-        .fontsize{
-            font-size:18px;
-        }
-
     </style>
 
 </asp:Content>
@@ -45,56 +40,24 @@
                     <div class="signin-form">
                         <h2 class="form-title"><b>CUSTOMER LOGIN</b></h2>
                         <div class="register-form" id="login-form">
-                           <%-- <div class="form-group">
-                                <%--<label class="mylbl" for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <div class="form-group">
+                                <label class="mylbl" for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                 <input type="text" runat="server" class="text-black mylbl" name="your_name" id="your_name" placeholder="Enter username"/>
-                            </div>--%>
-                             <div class="form-group row">
-                                <asp:Label runat="server"
-                                    CssClass="col-md-4 col-form-label font-base fw-bold fontsize">Username: </asp:Label>
-                                <div class="col-md-7">
-                                    <asp:TextBox runat="server" ID="txtusername" ToolTip="Username is required"
-                                        CssClass="form-control" />
-
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1"
-                                        ControlToValidate="txtusername"
-                                        ForeColor="#cc0000"
-                                        Display="Dynamic"
-                                        Text="Please, enter username."
-                                        SetFocusOnError="true"
-                                        runat="server" ErrorMessage="Please, enter username."></asp:RequiredFieldValidator>
-
-                                </div>
                             </div>
-
-                            <div class="form-group row">
-                                <asp:Label runat="server"
-                                    CssClass="col-md-4 col-form-label font-base fw-bold fontsize">Password: </asp:Label>
-                                <div class="col-md-7">
-                                    <asp:TextBox runat="server" TextMode="Password" ID="txtpass" ToolTip="Password is required"
-                                        CssClass="form-control" />
-
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2"
-                                        ControlToValidate="txtpass"
-                                        ForeColor="#cc0000"
-                                        Display="Dynamic"
-                                        Text="Please, enter password."
-                                        SetFocusOnError="true"
-                                        runat="server" ErrorMessage="Please, enter password."></asp:RequiredFieldValidator>
-
-                                </div>
+                            <div class="form-group">
+                                <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" class="mylbl" name="your_pass" id="your_pass" placeholder="Enter Password"/>
                             </div>
-
+                            <div class="form-group">
+                            </div>
                             <div class="form-group form-button">
                                 <%--<input type="submit" name="signin" id="signin" class="form-submit" value="Log in"/>--%>
                                 <asp:Button ID="Button1" CssClass="form-submit loginbtn" runat="server" Text="LOG IN" />
                             </div>
                             <br />
-                            <a href="customer-registration.aspx"><asp:Label ID="Label1" CssClass="btn-link btn text-linkedin" runat="server" Text="Already have an account?"></asp:Label></a>
-                            <a href="admin-login.aspx"><asp:Label ID="Label2" CssClass="btn-link btn text-dark" runat="server" Text="Login as Admin instead?"></asp:Label></a>
+                            <asp:Label ID="Label1" CssClass="btn-link btn text-linkedin" runat="server" Text="Already have an account?"></asp:Label>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
