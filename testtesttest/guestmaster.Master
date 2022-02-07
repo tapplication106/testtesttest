@@ -129,7 +129,7 @@ see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
               <li class="nav-item px-2 btn-primary text-white rounded-pill mylink"><a class="nav-link fw-medium text-white" href="#contact">Contact </a></li>
             </ul>
             <div class="d-flex">
-            <asp:Button CssClass="btn btn-lg btn-dark bg-gradient order-0" ID="btnregister" ValidationGroup="valnone" CausesValidation="false" runat="server" Text="Register" PostBackUrl="customer-register.aspx" /></div>
+            <asp:Button CssClass="btn btn-lg btn-dark bg-gradient order-0" ID="btnregister" ValidationGroup="valnone" CausesValidation="false" runat="server" Text="Register" PostBackUrl="customer-registration.aspx" /></div>
 			<p>&nbsp</p>
 			<p>&nbsp</p>
 			<p>&nbsp</p>
