@@ -83,7 +83,7 @@ WebConfigurationManager.ConnectionStrings["JACcs"].ConnectionString;
                     //create a memory cookie to store username and pwd
                     Response.Cookies["username"].Value = username;
                     Response.Cookies["pwd"].Value = password;
-                    if (chkremem.Checked==true)
+              /*      if (chkremem.Checked==true)
                     {
                         //if checkbox is ch ecked, make cookies persistent
                         Response.Cookies["username"].Expires = DateTime.Now.AddDays(100);
@@ -96,7 +96,7 @@ WebConfigurationManager.ConnectionStrings["JACcs"].ConnectionString;
                         //delete content of password field
                         Response.Cookies["username"].Expires = DateTime.Now.AddDays(-100);
                         Response.Cookies["pwd"].Expires = DateTime.Now.AddDays(-100);
-                    }
+                    }                                                                             */
                     //check if role type is admin or user - optional
                     //create and save username in a session variable
                     Session["username"] = username;
