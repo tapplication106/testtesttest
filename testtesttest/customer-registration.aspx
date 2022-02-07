@@ -75,7 +75,7 @@
                                         ForeColor="Red"
                                         ClientValidationFunction="validateNic"
                                         OnServerValidate="CustomValidator1_ServerValidate"
-                                        Text="7 to 12 characters"
+                                        Text="National ID should be 13 Characters"
                                         ErrorMessage="Invalid National ID"></asp:CustomValidator>
 
                                 </div>
@@ -218,15 +218,16 @@
 
                             <div class="form-group row justify-content-center">
                                 <asp:Label runat="server"
-                                    CssClass="col-md-2 col-form-label" Text="Area*"></asp:Label>
+                                    CssClass="col-md-2 col-form-label"  Text="Area*"></asp:Label>
                                 <div class="col-md-8">
-                                    <asp:TextBox runat="server" ID="txtarea" ToolTip="Area is REQUIRED"
+                                    <asp:TextBox runat="server" AutoPostBack="false" ID="txtarea" ToolTip="Area is REQUIRED"
                                         CssClass="form-control" />
 
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3"
                                         ControlToValidate="txtarea"
                                         ForeColor="#cc0000"
                                         Display="Dynamic"
+                                        
                                         Text="REQUIRED FIELD"
                                         SetFocusOnError="true"
                                         runat="server" ErrorMessage="Area is REQUIRED"></asp:RequiredFieldValidator>
@@ -403,9 +404,9 @@
 
                                     <asp:RegularExpressionValidator ID="regPass"
                                         ControlToValidate="txtpass"
-                                        ValidationExpression="^(?=.\d{2})(?=.[a-zA-Z]{2}).{6,}$"
+                                        ValidationExpression="^[a-z0-9][-a-z0-9._]+@([-a-z0-9]+[.])+[a-z]{2,5}$"
                                         runat="server"
-                                        ErrorMessage="Password Not Strong"></asp:RegularExpressionValidator>
+                                        ErrorMessage="Password should contain both number and character**"></asp:RegularExpressionValidator>
 
                                 </div>
                             </div>
