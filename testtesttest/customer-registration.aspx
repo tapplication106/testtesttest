@@ -28,7 +28,7 @@
 
                         <div class="form-horizontal text-center  ">
                             <br />
-                            <h2><i class="fas fa-user"></i>Customers Registration</h2>
+                            <h2><i class="fas fa-user"></i>Customer Registration</h2>
                             <hr />
 
                             <br />
