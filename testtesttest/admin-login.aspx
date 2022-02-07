@@ -47,7 +47,7 @@
                         <div class="register-form" id="login-form">
                            <%-- <div class="form-group">
                                 <%--<label class="mylbl" for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" runat="server" class="text-black mylbl" name="your_name" id="your_name" placeholder="Enter username"/>
+                                <input type="text" runat="server" class=" text-black mylbl" name="your_name" id="your_name" placeholder="Enter username"/>
                             </div>--%>
                              <div class="form-group row">
                                 <asp:Label runat="server"
