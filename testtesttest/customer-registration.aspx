@@ -21,7 +21,7 @@
 
     <script type="text/javascript">
         function validateNic(source, args) {
-            if (args.Value.length >0 && args.Value.length == 13)
+            if (args.Value.length == 14)
                 args.IsValid = true;
             else
                 args.IsValid = false;
@@ -404,7 +404,7 @@
 
                                     <asp:RegularExpressionValidator ID="regPass"
                                         ControlToValidate="txtpass"
-                                        ValidationExpression="^[a-z0-9][-a-z0-9._]+@([-a-z0-9]+[.])+[a-z]{2,5}$"
+                                        ValidationExpression="^[a-zA-Z0-9'@&#.\s]{7,10}$"
                                         runat="server"
                                         ErrorMessage="Password should contain both number and character**"></asp:RegularExpressionValidator>
 
