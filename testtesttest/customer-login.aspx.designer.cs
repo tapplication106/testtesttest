@@ -24,6 +24,15 @@ namespace testtesttest
         protected global::System.Web.UI.HtmlControls.HtmlInputText your_name;
 
         /// <summary>
+        /// your_pass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword your_pass;
+
+        /// <summary>
         /// Button1 control.
         /// </summary>
         /// <remarks>
@@ -31,6 +40,15 @@ namespace testtesttest
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button1;
+
+        /// <summary>
+        /// lblmsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblmsg;
 
         /// <summary>
         /// Label1 control.

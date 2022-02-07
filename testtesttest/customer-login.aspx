@@ -46,14 +46,15 @@
                             </div>
                             <div class="form-group">
                                 <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="password" class="mylbl" name="your_pass" id="your_pass" placeholder="Enter Password"/>
+                                <input type="password" runat="server" class="mylbl" name="your_pass" id="your_pass" placeholder="Enter Password"/>
                             </div>
                             <div class="form-group">
                             </div>
                             <div class="form-group form-button">
                                 <%--<input type="submit" name="signin" id="signin" class="form-submit" value="Log in"/>--%>
-                                <asp:Button ID="Button1" CssClass="form-submit loginbtn" runat="server" Text="LOG IN" />
+                                <asp:Button ID="Button1" CssClass="form-submit loginbtn" runat="server" Text="LOG IN" OnClick="Button1_Click" />
                             </div>
+                            <asp:Label ID="lblmsg" runat="server" Text=""></asp:Label>
                             <br />
                             <asp:Label ID="Label1" CssClass="btn-link btn text-linkedin" runat="server" Text="Already have an account?"></asp:Label>
                         </div>
