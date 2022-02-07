@@ -66,14 +66,14 @@
                                     CssClass="col-md-2 col-form-label  ">Title</asp:Label>
                                 <div class="col-md-8">
                                     <div class="form-check-inline">
-                                        <asp:RadioButton runat="server" GroupName="sex" ID="radMr"
+                                        <asp:RadioButton runat="server" GroupName="sex" ID="radMale"
                                             CssClass="form-check-input" />
                                         <asp:Label runat="server"
                                             CssClass="form-check-label">Mr.</asp:Label>
                                     </div>
 
                                     <div class="form-check-inline">
-                                        <asp:RadioButton runat="server" GroupName="sex" ID="radMrs"
+                                        <asp:RadioButton runat="server" GroupName="sex" ID="radFemale"
                                             CssClass="form-check-input" />
                                         <asp:Label runat="server"
                                             CssClass="form-check-label">Mrs.</asp:Label>
@@ -129,16 +129,16 @@
                             <br />
 
                             <div class="form-group row justify-content-center">
-                                <asp:Label ID="lbljdob" runat="server"
+                                <asp:Label ID="lbljDeadline" runat="server"
                                     CssClass="col-md-2 col-form-label">Date Of Birth</asp:Label>
                                 <div class="col-md-8">
                                     <asp:TextBox runat="server"
-                                        ID="txtdob"
+                                        ID="txtjDeadline"
                                         TextMode="Date"
                                         CssClass="form-control" />
 
-                                    <asp:RequiredFieldValidator ID="reqdob"
-                                        ControlToValidate="txtdob"
+                                    <asp:RequiredFieldValidator ID="reqjDeadline"
+                                        ControlToValidate="txtjDeadline"
                                         TextMode="Date"
                                         ForeColor="#cc0000"
                                         Text="REQUIRED FIELD"
@@ -190,10 +190,10 @@
                             <br />
 
                             <div class="form-group row justify-content-center">
-                                <asp:Label ID="lblDistrict" runat="server"
+                                <asp:Label ID="lbljDistrict" runat="server"
                                     CssClass="col-md-2 col-form-label" Text="District"></asp:Label>
                                 <div class="col-md-8">
-                                    <asp:DropDownList ID="ddlDistrict" runat="server"
+                                    <asp:DropDownList ID="ddljDistrict" runat="server"
                                         CssClass="form-control">
                                     </asp:DropDownList>
 

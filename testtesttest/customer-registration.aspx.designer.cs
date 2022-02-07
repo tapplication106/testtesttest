@@ -51,22 +51,22 @@ namespace testtesttest
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator6;
 
         /// <summary>
-        /// radMr control.
+        /// radMale control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton radMr;
+        protected global::System.Web.UI.WebControls.RadioButton radMale;
 
         /// <summary>
-        /// radMrs control.
+        /// radFemale control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton radMrs;
+        protected global::System.Web.UI.WebControls.RadioButton radFemale;
 
         /// <summary>
         /// radMiss control.
@@ -114,31 +114,31 @@ namespace testtesttest
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
 
         /// <summary>
-        /// lbljdob control.
+        /// lbljDeadline control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbljdob;
+        protected global::System.Web.UI.WebControls.Label lbljDeadline;
 
         /// <summary>
-        /// txtdob control.
+        /// txtjDeadline control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtdob;
+        protected global::System.Web.UI.WebControls.TextBox txtjDeadline;
 
         /// <summary>
-        /// reqdob control.
+        /// reqjDeadline control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqdob;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqjDeadline;
 
         /// <summary>
         /// txtstreet control.
@@ -177,22 +177,22 @@ namespace testtesttest
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
 
         /// <summary>
-        /// lblDistrict control.
+        /// lbljDistrict control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDistrict;
+        protected global::System.Web.UI.WebControls.Label lbljDistrict;
 
         /// <summary>
-        /// ddlDistrict control.
+        /// ddljDistrict control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlDistrict;
+        protected global::System.Web.UI.WebControls.DropDownList ddljDistrict;
 
         /// <summary>
         /// txtphone control.
