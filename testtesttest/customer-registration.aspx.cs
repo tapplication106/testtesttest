@@ -68,7 +68,7 @@ WebConfigurationManager.ConnectionStrings["JACcs"].ConnectionString;
             cmd.Parameters.AddWithValue("@pass", Encrypt(txtpass.Text.Trim()));
             cmd.Parameters.AddWithValue("@area", txtarea.Text.Trim());
             cmd.Parameters.AddWithValue("@street", txtstreet.Text.Trim());
-            cmd.Parameters.AddWithValue("@distict", ddljDistrict.SelectedItem.Text);
+            cmd.Parameters.AddWithValue("@district", ddljDistrict.SelectedItem.Text);
 
 
 
@@ -90,7 +90,7 @@ WebConfigurationManager.ConnectionStrings["JACcs"].ConnectionString;
                 lblMsg.Text = "Error while adding customer!!";
                 lblMsg.ForeColor = System.Drawing.Color.Red;
             }
-            Response.Redirect("~/pages/hologin");
+            Response.Redirect("~/customer-login");
         }
 
         protected void lnkreset_Click(object sender, EventArgs e)
