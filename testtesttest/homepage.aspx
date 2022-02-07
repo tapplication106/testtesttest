@@ -1,5 +1,17 @@
 ﻿<%@ Page Title="Homepage - Joyessur Agricultural Company" Language="C#" MasterPageFile="~/guestmaster.Master" AutoEventWireup="true" CodeBehind="homepage.aspx.cs" Inherits="testtesttest.homepage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+    <style>
+        .mybtn{
+             z-index:100;
+      
+        }
+
+        .background{
+            z-index:-100;
+        }
+    </style>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -12,13 +24,15 @@
           <div class="row align-items-center min-vh-75 min-vh-lg-100">
             <div class="col-md-7 col-lg-6 col-xxl-5 py-6 text-sm-start text-center">
               <h1 class="mt-6 mb-sm-4 fw-semi-bold lh-sm fs-4 fs-lg-5 fs-xl-6">Joyessur Agricultural <br class="d-block d-lg-block" />Company LTD</h1>
-              <p class="mb-4 fs-1">We provide you the best <u>main d'oeuvre</u> and educational materials for healthy sugarcane fields at the best price.</p><a class="btn btn-lg btn-success" href="#" role="button">Browse our packages</a>
+              <p class="mb-4 fs-1">We provide you the best <u>main d'oeuvre</u> and educational materials for healthy sugarcane fields at the best price.</p>
+                <%--<a class="btn btn-lg btn-success" href="packages.aspx" role="button">Browse our packages</a>--%>
+                <asp:Button ID="Button2" PostBackUrl="~/packages.aspx" CssClass="btn btn-lg btn-success mybtn" runat="server" Text="Browse packages" />
             </div>
           </div>
         </div>
       </section>
       <section class="py-5" id="Opportuanities">
-        <div class="bg-holder d-none d-sm-block" style="background-image:url(assets/img/illustrations/bg.png);background-position:top left;background-size:225px 755px;margin-top:-17.5rem;"></div>
+        <div class="bg-holder d-none d-sm-block background" style="background-image:url(assets/img/illustrations/bg.png);background-position:top left;background-size:225px 755px;margin-top:-17.5rem;"></div>
         <!--/.bg-holder-->
         <div class="container">
           <div class="row">
@@ -84,7 +98,8 @@
                       <hr class="text-white" style="height:0.12rem;width:2.813rem" />
                       <div class="pt-lg-3">
                         <h6 class="fw-bold text-white fs-1 fs-md-2 fs-lg-3 w-xxl-50">Select existing packages</h6>
-                        <p class="w-xxl-75"><br></p><button class="btn btn-lg btn-light text-success" type="button">Browse packages</button>
+                        <p class="w-xxl-75"><br></p><%--<button onclick="~/packages.aspx" runat="server" class="btn btn-lg btn-light text-success" type="button">Browse packages</button>--%>
+                          <asp:Button ID="Button1" PostBackUrl="~/packages.aspx" CssClass="btn btn-lg btn-light text-success" runat="server" Text="Browse packages" />
                       </div>
                     </div>
                   </div>
@@ -328,7 +343,9 @@
             <div class="col-12">
               <div class="card shadow h-100 py-5">
                 <div class="card-body text-center">
-                  <h1 class="fw-semi-bold mb-4">Provide&nbsp;<span class="text-success"> the best</span> &nbsp; for your fields with us.</h1><a class="btn btn-lg btn-success px-6" href="#" role="button">Purchase our packages</a>
+                  <h1 class="fw-semi-bold mb-4">Provide&nbsp;<span class="text-success"> the best</span> &nbsp; for your fields with us.</h1>
+                    <%--<a class="btn btn-lg btn-success px-6" href="#" role="button">Purchase our packages</a>--%>
+                    <asp:Button ID="Button3" PostBackUrl="~/packages.aspx" CssClass="btn btn-lg btn-success px-6" runat="server" Text="Purchase our packages" />
                 </div>
               </div>
             </div>

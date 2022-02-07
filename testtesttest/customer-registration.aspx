@@ -4,8 +4,8 @@
     <style>
         #container2 {
             width: 100%;
-            /background-image: linear-gradient( 135deg, #FFF720 10%, #3CD500 100%);
-            / border-radius: 20px;
+            /*background-image: linear-gradient( 135deg, #FFF720 10%, #3CD500 100%);*/
+            border-radius: 20px;
             padding: 20px;
             margin-bottom: 20px;
             margin-top: 20px;
@@ -21,7 +21,7 @@
 
     <script type="text/javascript">
         function validateNic(source, args) {
-            if (args.Value.length == 14)
+            if (args.Value.length == 13)
                 args.IsValid = true;
             else
                 args.IsValid = false;
@@ -57,18 +57,19 @@
                                 <asp:Label runat="server"
                                     CssClass="col-md-2 col-form-label " Text="National ID*"></asp:Label>
                                 <div class="col-md-8">
-                                    <asp:TextBox runat="server" ID="txtnic" ToolTip="National Identity Card Number is REQUIRED!!!"
+                                    <asp:TextBox runat="server" ID="txtnic"
+                                        ToolTip="National Identity is REQUIRED"
                                         CssClass="form-control" />
 
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator6"
+                                    <asp:RequiredFieldValidator ID="reqnic"
                                         ControlToValidate="txtnic"
                                         ForeColor="#cc0000"
                                         Display="Dynamic"
                                         Text="REQUIRED FIELD"
                                         SetFocusOnError="true"
-                                        runat="server" ErrorMessage="NIC is REQUIRED"></asp:RequiredFieldValidator>
+                                        runat="server" ErrorMessage="Username is REQUIRED"></asp:RequiredFieldValidator><br />
 
-                                    <asp:CustomValidator ID="CustomValidator1"
+                                    <asp:CustomValidator ID="CusNic"
                                         runat="server"
                                         AutoPostBack="true"
                                         ControlToValidate="txtnic"
@@ -77,6 +78,13 @@
                                         OnServerValidate="CustomValidator1_ServerValidate"
                                         Text="National ID should be 13 Characters"
                                         ErrorMessage="Invalid National ID"></asp:CustomValidator>
+
+                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator7"
+                                        runat="server" ControlToValidate="txtnic"
+                                        ValidationExpression="^[A-Z]{1}[0-9]{12}$"
+                                        ErrorMessage="Invalid First Name"></asp:RegularExpressionValidator>
+
+
 
                                 </div>
                             </div>
@@ -117,7 +125,8 @@
                                 <asp:Label runat="server"
                                     CssClass="col-md-2 col-form-label" Text="First Name*"></asp:Label>
                                 <div class="col-md-8">
-                                    <asp:TextBox runat="server" ID="txtfname" ToolTip="First name is required"
+                                    <asp:TextBox runat="server" ID="txtfname"
+                                        ToolTip="First name is required"
                                         CssClass="form-control" />
 
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1"
@@ -126,7 +135,7 @@
                                         Display="Dynamic"
                                         Text="REQUIRED FIELD"
                                         SetFocusOnError="true"
-                                        runat="server" ErrorMessage="First name is REQUIRED!!!"></asp:RequiredFieldValidator>
+                                        runat="server" ErrorMessage="First Name is REQUIRED!!!"></asp:RequiredFieldValidator><br />
 
                                     <asp:RegularExpressionValidator ID="RegularExpressionValidator2"
                                         runat="server" ControlToValidate="txtfname"
@@ -150,13 +159,13 @@
                                         Display="Dynamic"
                                         Text="REQUIRED FIELD"
                                         SetFocusOnError="true"
-                                        runat="server" ErrorMessage="Last name is REQUIRED"></asp:RequiredFieldValidator>
-                               
+                                        runat="server" ErrorMessage="Last name is REQUIRED"></asp:RequiredFieldValidator><br />
+
                                     <asp:RegularExpressionValidator ID="RegularExpressionValidator3"
                                         runat="server" ControlToValidate="txtlname"
                                         ValidationExpression="^[a-zA-Z]*$"
                                         ErrorMessage="Invalid Last Name"></asp:RegularExpressionValidator>
-                                
+
                                 </div>
                             </div>
 
@@ -209,7 +218,7 @@
                                         SetFocusOnError="true"
                                         runat="server" ErrorMessage="Street is REQUIRED"></asp:RequiredFieldValidator>
 
-                                    
+
 
                                 </div>
                             </div>
@@ -218,22 +227,21 @@
 
                             <div class="form-group row justify-content-center">
                                 <asp:Label runat="server"
-                                    CssClass="col-md-2 col-form-label"  Text="Area*"></asp:Label>
+                                    CssClass="col-md-2 col-form-label" Text="Area*"></asp:Label>
                                 <div class="col-md-8">
-                                    <asp:TextBox runat="server" AutoPostBack="false" ID="txtarea" ToolTip="Area is REQUIRED"
+                                    <asp:TextBox runat="server" ID="txtarea" ToolTip="Area is REQUIRED"
                                         CssClass="form-control" />
 
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3"
                                         ControlToValidate="txtarea"
                                         ForeColor="#cc0000"
                                         Display="Dynamic"
-                                        
                                         Text="REQUIRED FIELD"
                                         SetFocusOnError="true"
-                                        runat="server" ErrorMessage="Area is REQUIRED"></asp:RequiredFieldValidator>
+                                        runat="server" ErrorMessage="Area is REQUIRED"></asp:RequiredFieldValidator><br />
 
                                     <asp:RegularExpressionValidator ID="RegularExpressionValidator4"
-                                        runat="server" ControlToValidate="txtfname"
+                                        runat="server" ControlToValidate="txtarea"
                                         ValidationExpression="^[a-zA-Z]*$"
                                         ErrorMessage="Invalid Area"></asp:RegularExpressionValidator>
 
@@ -278,14 +286,14 @@
                                         Display="Dynamic"
                                         Text="REQUIRED FIELD"
                                         SetFocusOnError="true"
-                                        runat="server" ErrorMessage="Mobile Phone is REQUIRED"></asp:RequiredFieldValidator>
+                                        runat="server" ErrorMessage="Mobile Phone is REQUIRED"></asp:RequiredFieldValidator><br />
 
                                     <asp:RegularExpressionValidator ID="RegularExpressionValidator5"
                                         runat="server" ControlToValidate="txtphone"
                                         ValidationExpression="^[5]{1}\d{7}$"
                                         ErrorMessage="Invalid Mobile Number"></asp:RegularExpressionValidator>
 
-                                
+
 
                                 </div>
                             </div>
@@ -304,16 +312,16 @@
                                         Display="Dynamic"
                                         Text="REQUIRED FIELD"
                                         SetFocusOnError="true"
-                                        runat="server" ErrorMessage="Telephone Number is REQUIRED*"></asp:RequiredFieldValidator>
-                               
+                                        runat="server" ErrorMessage="Telephone Number is REQUIRED*"></asp:RequiredFieldValidator><br />
+
                                     <asp:RegularExpressionValidator ID="RegularExpressionValidator6"
                                         runat="server" ControlToValidate="txttel"
-                                        ValidationExpression="^[2-6]{1}\d{6}$"
+                                        ValidationExpression="^[246]{1}\d{6}$"
                                         ErrorMessage="Invalid Mobile Number"></asp:RegularExpressionValidator>
 
 
-                                  
-                                
+
+
                                 </div>
 
                             </div>
@@ -376,7 +384,7 @@
                                         CssClass="form-control" />
 
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator8"
-                                        ControlToValidate="txtlname"
+                                        ControlToValidate="txtusername"
                                         ForeColor="#cc0000"
                                         Display="Dynamic"
                                         Text="REQUIRED FIELD"
