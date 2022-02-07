@@ -171,6 +171,7 @@
     <Content Include="customer-login-file\vendor\jquery\jquery-ui.min.js" />
     <Content Include="customer-login-file\vendor\jquery\jquery.min.js" />
     <Content Include="customer-login.aspx" />
+    <Content Include="customer-registration.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -399,6 +400,13 @@
     </Compile>
     <Compile Include="customer-login.aspx.designer.cs">
       <DependentUpon>customer-login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="customer-registration.aspx.cs">
+      <DependentUpon>customer-registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="customer-registration.aspx.designer.cs">
+      <DependentUpon>customer-registration.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
