@@ -78,6 +78,7 @@ color:black;
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+
     
       <section class="py-5 mtcards">
     <div class="container">
@@ -116,7 +117,8 @@ color:black;
                 </header>
             </div>
         </div><!-- END -->
-
+     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+        <ContentTemplate>
 
         <div class="row">
             <div class="col-lg-6 mx-auto">
@@ -131,7 +133,8 @@ color:black;
                     <p><b>Choose from these procedures and create the package:</b>
                     </p>
                     <br />
-                    <asp:CheckBoxList ID="CheckBoxList1" CssClass="MyClass" runat="server">
+                    
+                    <asp:CheckBoxList ID="CheckBoxList1" CssClass="MyClass" runat="server" OnSelectedIndexChanged="CheckBoxList1_SelectedIndexChanged" AutoPostBack="true" >
                   <asp:ListItem Value="Land clearing"> &nbsp; Land clearing &nbsp; </asp:ListItem>
                         <asp:ListItem  Value="Stone removal (Epierrage)"> &nbsp; Stone removal (Epierrage) &nbsp; </asp:ListItem>
                         <asp:ListItem Value="Hilling (Buttage)"> &nbsp; Hilling (Buttage) </asp:ListItem>
@@ -154,9 +157,10 @@ color:black;
                                     <asp:TextBox  runat="server" ID="txttotal" ToolTip="Total selected"
                                         CssClass="form-control myinput2" Enabled="false" TextMode="Number" />
 
-
+     
                             </div>
-
+                        
+                        
                         <br />
                         <hr />
                         <p>Request a quotation and we will contact you as soon as possible to negotiate.</p>
@@ -167,7 +171,7 @@ color:black;
                         <asp:Button ID="Button2" CssClass="btn-warning btn p-3" runat="server" Text="Cancel order" PostBackUrl="~/packages.aspx" />
                     </footer>
                 </blockquote><!-- END -->
-
+                
             </div>
         </div>
      </div>
@@ -196,5 +200,6 @@ color:black;
                           </ContentTemplate>
                             </asp:UpdatePanel>
                             </asp:Panel>--%>
-
+    </ContentTemplate>
+        </asp:UpdatePanel>
 </asp:Content>

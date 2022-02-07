@@ -11,7 +11,10 @@ namespace testtesttest
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["username"] == null)
+            {
+                Response.Redirect("~/customer-login");
+            }
         }
 
 

@@ -113,7 +113,7 @@
                         <p>Rs 8,000 per year</p>
 
 
-                        <asp:Button ID="Button2" CssClass="btn-primary btn p-3" runat="server" PostBackUrl="~/thankyou.aspx" Text="✔️ Order package" />
+                        <asp:Button ID="Button2" CssClass="btn-primary btn p-3" runat="server" PostBackUrl="~/thankyou.aspx" Text="✔️ Order package" OnClick="Button2_Click" />
                         <asp:Button ID="Button1" CssClass="btn-warning btn p-3" runat="server" Text="Cancel order" PostBackUrl="~/packages.aspx" />
                     </footer>
                 </blockquote><!-- END -->

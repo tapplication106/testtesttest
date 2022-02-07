@@ -109,7 +109,7 @@
                        
                     </p>
                     <footer class="pt-4 mt-4 border-top">
-                        <p>Rs 12,000 per acre</p>
+                        <p runat="server" id="plant">Rs 12,000 per acre</p>
                         <asp:Button ID="Button1" CssClass="btn-primary btn p-3" PostBackUrl="~/package-1.aspx" runat="server" Text="Select package" />
                     </footer>
                 </blockquote><!-- END -->
@@ -152,8 +152,8 @@
                         <br /><span class="text-linkedin">📌 &nbsp; Workers transport</span>
                     </p>
                     <footer class="pt-4 mt-4 border-top">
-                        <p>Rs 8,000 per year</p>
-                        <asp:Button ID="Button2" CssClass="btn-primary btn p-3" PostBackUrl="~/package-2.aspx" runat="server" Text="Select package" />
+                        <p runat="server" id="irrig">Rs 8,000 per year</p>
+                        <asp:Button ID="Button2" CssClass="btn-primary btn p-3" PostBackUrl="~/package-2.aspx"  runat="server" Text="Select package" />
                     </footer>
                 </blockquote><!-- END -->
 
@@ -195,7 +195,7 @@
                         <br /><span class="text-linkedin">📌 &nbsp; Waste transport</span>
                     </p>
                     <footer class="pt-4 mt-4 border-top">
-                        <p>Rs 4,000 per acre</p>
+                        <p runat="server" id="cut">Rs 4,000 per acre</p>
                         <asp:Button ID="Button3" CssClass="btn-primary btn p-3" PostBackUrl="~/package-3.aspx" runat="server" Text="Select package" />
                     </footer>
                 </blockquote><!-- END -->
@@ -238,8 +238,8 @@
                         <br /><span class="text-linkedin">📌 &nbsp; Crop transport</span>
                     </p>
                     <footer class="pt-4 mt-4 border-top">
-                        <p>Rs 550 to Rs 625 depending on distance.</p>
-                        <asp:Button ID="Button4" CssClass="btn-primary btn p-3" runat="server" PostBackUrl="~/package-4.aspx" Text="Select package" />
+                        <p runat="server" id="harv">Rs 550 to Rs 625 depending on distance.</p>
+                        <asp:Button ID="Button4" CssClass="btn-primary btn p-3" runat="server" PostBackUrl="~/package-4.aspx"  Text="Select package" />
                     </footer>
                 </blockquote><!-- END -->
 
