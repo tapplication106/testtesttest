@@ -49,9 +49,6 @@
                                 <input type="password" class="mylbl" name="your_pass" id="your_pass" placeholder="Enter Password"/>
                             </div>
                             <div class="form-group">
-                               
-                                <label for="remember-me" class="col-md-5 col-form-label" >Remember me: </label><br />
-                                 <asp:CheckBox ID="CheckBox1" CssClass="col-md-2" Enabled="true" runat="server" />
                             </div>
                             <div class="form-group form-button">
                                 <%--<input type="submit" name="signin" id="signin" class="form-submit" value="Log in"/>--%>
