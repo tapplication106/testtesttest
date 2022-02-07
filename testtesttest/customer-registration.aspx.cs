@@ -68,7 +68,7 @@ WebConfigurationManager.ConnectionStrings["JACcs"].ConnectionString;
             cmd.Parameters.AddWithValue("@pass", Encrypt(txtpass.Text.Trim()));
             cmd.Parameters.AddWithValue("@area", txtarea.Text.Trim());
             cmd.Parameters.AddWithValue("@street", txtstreet.Text.Trim());
-            cmd.Parameters.AddWithValue("@distict", ddljDistrict.SelectedValue);
+            cmd.Parameters.AddWithValue("@distict", ddljDistrict.SelectedItem.Text);
 
 
 
