@@ -75,14 +75,14 @@
                                         AutoPostBack="true"
                                         ControlToValidate="txtnic"
                                         ForeColor="#cc0000"
-                                        ClientValidationFunction="validateNic"
+                                        ClientValidationFunction="validateNic" Display="Dynamic"
                                         OnServerValidate="CustomValidator1_ServerValidate"
                                         Text="National ID should be 14 Characters"
-                                        ErrorMessage="Invalid National ID"></asp:CustomValidator>
+                                        ErrorMessage="Invalid National ID"></asp:CustomValidator> <br />
 
                                     <asp:RegularExpressionValidator ID="RegularExpressionValidator7"
                                         runat="server" ControlToValidate="txtnic"
-                                        ForeColor="#cc0000"
+                                        ForeColor="#cc0000" Display="Dynamic"
                                         ValidationExpression="^[A-Z]{1}[0-9]{13}$"
                                         ErrorMessage="Invalid National ID"></asp:RegularExpressionValidator>
 
@@ -372,7 +372,7 @@
 
                             <div class="form-group row justify-content-center">
                                 <asp:Label ID="Label1" runat="server" ForeColor="black"
-                                    CssClass="col-md-4 col-form-label" Text="Upload Picture*"></asp:Label>
+                                    CssClass="col-md-4 col-form-label" Text="Upload Picture"></asp:Label>
                                 <div class="col-md-6">
                                     <asp:FileUpload ID="FileUpload1" runat="server"
                                         CssClass=" file form-control" />
