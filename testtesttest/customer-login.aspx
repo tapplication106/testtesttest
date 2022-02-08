@@ -56,7 +56,7 @@
                             </div>
                             <asp:Label ID="lblmsg" runat="server" Text=""></asp:Label>
                             <br />
-                            <asp:Label ID="Label1" CssClass="btn-link btn text-linkedin" runat="server" Text="Already have an account?"></asp:Label>
+                            <asp:Label ID="Label1" CssClass="btn-link btn text-linkedin" runat="server" Text="Don't have an account yet? Register here."></asp:Label>
                         </div>
                     </div>
                 </div>
